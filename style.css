@@ -45,7 +45,7 @@ body {
 .nav a {
   margin-right: 1.5rem;
   text-decoration: none;
-  color:#4b5563;
+  color:white;
 }
 .menu-toggle{
   display: none;
@@ -144,7 +144,8 @@ body {
 }
 .card:hover{
   box-shadow: 0 0 12px rgba(59,130,240,0.4);
-  border-color: #3b82f6;;
+  border-color: #3b82f6;
+  transition: 1s;
 }
 
 .card h3 {
@@ -180,14 +181,41 @@ body {
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.875rem;
-  color: #9ca3af;
-  background: #111827;
+  background: #111827; /* dark navy */
+  color: #d1d5db;      /* light gray */
+  padding: 2rem 1.5rem;
+  
 }
 
-/* Media queries */
+
+
+.footer .links {
+  display: flex;
+  justify-content: right;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer .links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer .links a:hover {
+  color: #3b82f6; /* blue hover */
+}
+
+.footer p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+
+/* Media queries for mobile and tablet max width is 768px */
 @media (max-width:768px) {
    .menu-toggle{
     display: block;
