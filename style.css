@@ -18,24 +18,49 @@ body {
 
 /* Header */
 .header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  background:black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+ 
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+
 }
+/* for desktop nav */
+@media (min-width: 769px) {
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
 
 .nav a {
   margin-right: 1.5rem;
   text-decoration: none;
-  color: #4b5563;
+  color:#4b5563;
+}
+.menu-toggle{
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+ z-index: 200;
+ background-color: white;
 }
 
 .logo {
   font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
 /* Buttons */
@@ -62,8 +87,9 @@ body {
 
 /* Hero */
 .hero {
+  margin-top: 100px;
   height: 70vh;
-  background: #ffffff;
+  background: #070707;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,12 +100,13 @@ body {
 .hero-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .hero-content p {
   max-width: 600px;
   margin: 0 auto 2rem;
-  color: #6b7280;
+  color:white;
 }
 
 /* Filters */
@@ -134,6 +161,9 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+.card.hidden{
+  display: none;
+}
 
 /* CTA */
 .cta {
@@ -157,5 +187,39 @@ body {
   background: #111827;
 }
 
+/* Media queries */
+@media (max-width:768px) {
+   .menu-toggle{
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top:1.2rem;
+    font-size: 1.3rem;
+    /* background: none; */
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    border-color: #ffffff;
+   }
+   .nav{
+    position: absolute;
+    top:64px;
+    right:0;
+    background-color: white;  
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    border-bottom: 1px solid white;
+    z-index: 100;
+   }
+   .nav.open {
+    display: flex;
+  }
+  .nav a {
+    padding: 1rem;
+    margin: 0;
+    border-top: 1px solid #e5e7eb;
+}
+}
 
 

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Tours-Beauhurst</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="style.css" />
  
 </head>
@@ -15,12 +15,14 @@
   <header class="header">
     <div class="container header-inner">
       <h1 class="logo">Beauhurst</h1>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       <nav class="nav">
         <a href="#">Product</a>
         <a href="#">Pricing</a>
         <a href="#">Resources</a>
+        <a href="#" class="btn primary">Book a demo</a>
       </nav>
-      <a href="#" class="btn primary">Book a demo</a>
+
     </div>
   </header>
 
@@ -38,41 +40,41 @@
 
   <!-- Filters -->
   <section class="container filters">
-    <button class="item active">All</button>
-    <button class="item">Investors</button>
-    <button class="item">Corporates</button>
-    <button class="item">Advisors</button>
-    <button class="item">Universities</button>
+    <button class="item active" data-filter="all">All</button>
+    <button class="item" data-filter="investors">Investors</button>
+    <button class="item" data-filter="corporates">Corporates</button>
+    <button class="item" data-filter="advisors">Advisors</button>
+    <button class="item" data-filter="popular">Popular</button>
   </section>
 
   <!-- Tours Grid -->
   <section class="container grid">
-    <div class="card">
+    <div class="card" data-category="investors">
       <h3>VC Deal Sourcing</h3>
       <p>Find high-growth companies earlier and build stronger pipelines.</p>
       <a href="#">View tour →</a>
     </div>
-    <div class="card">
+    <div class="card"data-category="investors">
       <h3>Corporate Innovation</h3>
       <p>Identify partners, acquisition targets and emerging trends.</p>
       <a href="#">View tour →</a>
     </div>
-    <div class="card">
+    <div class="card" data-category="corporates">
       <h3>University Engagement</h3>
       <p>Track spinouts, impact and regional ecosystem performance.</p>
       <a href="#">View tour →</a>
     </div>
-    <div class="card">
+    <div class="card"data-category="advisors">
       <h3>Market Research</h3>
       <p>Analyse sectors, funding activity and competitor landscapes.</p>
       <a href="#">View tour →</a>
     </div>
-    <div class="card">
+    <div class="card" data-category="popular">
       <h3>Portfolio Monitoring</h3>
       <p>Stay up to date on portfolio performance and follow-on rounds.</p>
       <a href="#">View tour →</a>
     </div>
-    <div class="card">
+    <div class="card" data-category="corporates">
       <h3>Advisory Origination</h3>
       <p>Source clients and uncover mandates using data-led insights.</p>
       <a href="#">View tour →</a>
@@ -90,7 +92,7 @@
   <footer class="footer">
     © 2026 Beauhurst. All rights reserved.
   </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
 
