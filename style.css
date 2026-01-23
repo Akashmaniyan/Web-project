@@ -38,6 +38,7 @@ body {
   .nav {
     display: flex;
     align-items: center;
+    
   }
 }
 
@@ -53,8 +54,8 @@ body {
   cursor: pointer;
   border: none;
   background: none;
- z-index: 200;
- background-color: white;
+  z-index: 200;
+  background-color: white;
 }
 
 .logo {
@@ -187,8 +188,6 @@ body {
   
 }
 
-
-
 .footer .links {
   display: flex;
   justify-content: right;
@@ -239,6 +238,7 @@ body {
     display: none;
     border-bottom: 1px solid white;
     z-index: 100;
+
    }
    .nav.open {
     display: flex;
@@ -247,6 +247,7 @@ body {
     padding: 1rem;
     margin: 0;
     border-top: 1px solid #e5e7eb;
+    color: black;
 }
 }
 
